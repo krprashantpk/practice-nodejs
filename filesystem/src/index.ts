@@ -1,4 +1,8 @@
-import { FileReader } from "./FileReader";
+import { FileAccess } from "./FileAccess";
 
-const reader: FileReader = new FileReader();
-reader.ReadAsync('./content/file1.txt').then((content) => console.log(content));
+const path: string = "./content/directory/fileaccess/1.txt";
+
+var hasAccess = new FileAccess()
+    .isAccessibleSync(path)
+console.log(hasAccess);
+
